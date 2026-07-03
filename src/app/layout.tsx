@@ -1,0 +1,58 @@
+import type { Metadata, Viewport } from "next";
+import "./globals.css";
+import { ShrimyDefs } from "@/components/Shrimy";
+import AmbientBackground from "@/components/AmbientBackground";
+import Navbar from "@/components/Navbar";
+import BottomNav from "@/components/BottomNav";
+import Footer from "@/components/Footer";
+import ChatWidget from "@/components/ChatWidget";
+import { AuthProvider } from "@/components/AuthProvider";
+import { CartProvider } from "@/components/CartProvider";
+
+export const metadata: Metadata = {
+  title: "Shrimp Loop — Dari Limbah Menjadi Nilai",
+  description:
+    "Platform digital ekonomi sirkular yang mengubah limbah udang Aceh menjadi kitosan, pakan akuakultur, dan pupuk organik. UTU Awards 2026 · Universitas Teuku Umar.",
+  keywords: ["kitosan", "limbah udang", "ekonomi sirkular", "Aceh", "pakan ikan", "pupuk organik", "Shrimp Loop"],
+  authors: [{ name: "Tim Shrimp Loop · Universitas Teuku Umar" }],
+  openGraph: {
+    title: "Shrimp Loop — Dari Limbah Menjadi Nilai. Dari Laut Kembali ke Laut.",
+    description: "Ekosistem agro-marina sirkular digital di Aceh.",
+    type: "website",
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#C93B1B",
+  width: "device-width",
+  initialScale: 1,
+};
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html lang="id" data-scroll-behavior="smooth">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body>
+        <a href="#main" className="skip-link">Lewati ke konten</a>
+        <ShrimyDefs />
+        <AmbientBackground />
+        <AuthProvider>
+          <CartProvider>
+            <Navbar />
+            <main id="main" className="has-bottom-nav">{children}</main>
+            <Footer />
+            <BottomNav />
+            <ChatWidget />
+          </CartProvider>
+        </AuthProvider>
+      </body>
+    </html>
+  );
+}
