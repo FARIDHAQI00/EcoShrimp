@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { Suspense, useState } from "react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import Shrimy from "@/components/Shrimy";
@@ -18,7 +18,7 @@ const LOCATIONS = [
   "Aceh Selatan", "Aceh Barat Daya", "Simeulue", "Gayo Lues", "Aceh Tenggara", "Subulussalam",
 ];
 
-export default function DaftarPage() {
+function DaftarContent() {
   const router = useRouter();
   const params = useSearchParams();
   const { setSession } = useAuth();
@@ -143,5 +143,13 @@ export default function DaftarPage() {
         </p>
       </div>
     </section>
+  );
+}
+
+export default function DaftarPage() {
+  return (
+    <Suspense fallback={<section className="section auth-wrap"><div className="container auth-container"><p className="text-muted">Memuat…</p></div></section>}>
+      <DaftarContent />
+    </Suspense>
   );
 }

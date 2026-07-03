@@ -1,13 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { Suspense, useState } from "react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import Shrimy from "@/components/Shrimy";
 import { useAuth } from "@/components/AuthProvider";
 import { permissionsOf, roleHomePath } from "@/lib/auth/roles";
 
-export default function MasukPage() {
+function MasukContent() {
   const router = useRouter();
   const params = useSearchParams();
   const { setSession } = useAuth();
@@ -93,5 +93,13 @@ export default function MasukPage() {
         </p>
       </div>
     </section>
+  );
+}
+
+export default function MasukPage() {
+  return (
+    <Suspense fallback={<section className="section auth-wrap"><div className="container auth-container auth-container--narrow"><p className="text-muted">Memuat…</p></div></section>}>
+      <MasukContent />
+    </Suspense>
   );
 }

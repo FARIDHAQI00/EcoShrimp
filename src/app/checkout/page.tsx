@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { Suspense, useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import Shrimy from "@/components/Shrimy";
@@ -23,7 +23,7 @@ interface OrderResult {
   pointsBalance: number;
 }
 
-export default function CheckoutPage() {
+function CheckoutContent() {
   const router = useRouter();
   const params = useSearchParams();
   const { lines, selectedLines, removeItems, hydrated } = useCart();
@@ -266,5 +266,13 @@ export default function CheckoutPage() {
         </div>
       </div>
     </section>
+  );
+}
+
+export default function CheckoutPage() {
+  return (
+    <Suspense fallback={<section className="section"><div className="container"><p className="text-muted">Memuat…</p></div></section>}>
+      <CheckoutContent />
+    </Suspense>
   );
 }
