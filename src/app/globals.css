@@ -97,9 +97,9 @@
   --shadow-lg: 0 8px 32px rgba(201, 59, 27, 0.12), 0 4px 12px rgba(201, 59, 27, 0.08);
   --shadow-xl: 0 16px 48px rgba(201, 59, 27, 0.14), 0 8px 24px rgba(201, 59, 27, 0.10);
   --shadow-2xl: 0 24px 64px rgba(201, 59, 27, 0.18), 0 12px 32px rgba(201, 59, 27, 0.12);
-  --glow-primary: 0 0 24px rgba(232, 99, 26, 0.35);
-  --glow-green: 0 0 24px rgba(30, 123, 74, 0.35);
-  --glow-gold: 0 0 24px rgba(212, 134, 15, 0.35);
+  --glow-primary: 0 0 0 0 transparent;
+  --glow-green: 0 0 0 0 transparent;
+  --glow-gold: 0 0 0 0 transparent;
 
   /* ---- 6 Radius & Border ---- */
   --radius-xs: 4px;
@@ -353,7 +353,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   box-shadow: var(--shadow-lg), var(--glow-primary);
   transition: all var(--duration-medium) var(--ease-smooth);
 }
-.btn-gradient:hover { box-shadow: var(--shadow-xl), 0 0 32px rgba(232, 99, 26, 0.5); transform: translateY(-2px) scale(1.01); }
+.btn-gradient:hover { box-shadow: var(--shadow-xl); transform: translateY(-2px) scale(1.01); }
 
 .btn-glass {
   background: var(--glass-bg-subtle);
@@ -749,6 +749,33 @@ ul { margin: 0; padding: 0; list-style: none; }
 .shrimy-wrap .shrimy { position: relative; z-index: 1; }
 
 .shrimy--float { animation: floaty 4.5s ease-in-out infinite; }
+
+/* Eye/face tracking — pupil & wajah mengikuti kursor (var --sx/--sy per instance) */
+.shrimy--live { --sx: 0; --sy: 0; }
+.shrimy-tilt {
+  transform: translate(calc(var(--sx) * 3px), calc(var(--sy) * 2.6px)) rotate(calc(var(--sx) * 1.6deg));
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: transform .3s cubic-bezier(.22, .61, .36, 1);
+  will-change: transform;
+}
+.s-pupil {
+  transform: translate(calc(var(--sx) * 4.4px), calc(var(--sy) * 4px));
+  transition: transform .14s cubic-bezier(.22, .61, .36, 1);
+  will-change: transform;
+}
+.s-glint {
+  transform: translate(calc(var(--sx) * 1.6px), calc(var(--sy) * 1.4px));
+  transition: transform .14s cubic-bezier(.22, .61, .36, 1);
+}
+.s-lid-e {
+  transform: scaleY(0);
+  transform-box: fill-box;
+  transform-origin: center top;
+  animation: blinkLid 4.8s ease-in-out infinite;
+}
+@keyframes blinkLid { 0%, 90%, 100% { transform: scaleY(0); } 93%, 95% { transform: scaleY(1); } }
+
 #s-eyes, .s-eyes { animation: blink 4.6s linear infinite; transform-origin: center; transform-box: fill-box; }
 .s-antenna-l { animation: swayL 3.4s ease-in-out infinite; transform-origin: bottom center; transform-box: fill-box; }
 .s-antenna-r { animation: swayR 3.8s ease-in-out infinite; transform-origin: bottom center; transform-box: fill-box; }
