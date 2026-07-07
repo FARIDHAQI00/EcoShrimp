@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import Shrimy from "./Shrimy";
 import { Star, Leaf, Bag, Check } from "./Icons";
 import { PRODUCTS, formatRupiah, type Product } from "@/lib/data";
@@ -86,7 +87,18 @@ export default function MarketplaceClient() {
             <article className="card prod-card" key={p.id}>
               <div className="prod-media">
                 {p.tag && <span className="tag tag-brand badge-abs">{p.tag}</span>}
-                <Shrimy size={78} />
+                {p.image ? (
+                  <Image
+                    src={p.image}
+                    alt={p.name}
+                    width={400}
+                    height={280}
+                    style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                    priority={false}
+                  />
+                ) : (
+                  <Shrimy size={78} />
+                )}
               </div>
               <div className="prod-body">
                 <span className="overline">{p.category}</span>

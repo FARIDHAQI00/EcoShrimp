@@ -1,9 +1,9 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import Shrimy from "./Shrimy";
 import { Bag } from "./Icons";
 import { useAuth } from "./AuthProvider";
 import { useCart } from "./CartProvider";
@@ -43,7 +43,14 @@ export default function Navbar() {
     <header className={`nav-desktop ${scrolled ? "scrolled" : ""}`}>
       <div className="container nav-inner">
         <Link href="/" className="nav-brand" aria-label="EcoShrimp — Beranda">
-          <Shrimy size={38} />
+          <Image
+            src="/logo.png"
+            alt="EcoShrimp"
+            width={40}
+            height={40}
+            style={{ objectFit: "contain" }}
+            priority
+          />
           <span className="nav-wordmark">EcoShrimp</span>
         </Link>
 

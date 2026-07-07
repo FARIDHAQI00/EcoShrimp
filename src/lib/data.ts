@@ -168,6 +168,8 @@ export type Product = {
   /** "own" = diproduksi EcoShrimp, "verified" = produk mitra terverifikasi */
   sellerType: "own" | "verified";
   tag?: string;
+  /** URL foto produk untuk marketplace */
+  image?: string;
 };
 
 export const PRODUCTS: Product[] = [
@@ -186,6 +188,7 @@ export const PRODUCTS: Product[] = [
     sellerNote: "Diolah di pusat pengolahan EcoShrimp",
     sellerType: "own",
     tag: "Produksi Sendiri",
+    image: "/products/chito-grow.jpg",
   },
   {
     id: "p2",
@@ -202,6 +205,7 @@ export const PRODUCTS: Product[] = [
     sellerNote: "Lolos Quality Control · EcoShrimp Certified",
     sellerType: "verified",
     tag: "EcoShrimp Certified",
+    image: "/products/aqua-feed.jpg",
   },
 ];
 
