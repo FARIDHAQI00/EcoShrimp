@@ -7,7 +7,7 @@ import { Star, Leaf, Bag, Check } from "./Icons";
 import { PRODUCTS, formatRupiah, type Product } from "@/lib/data";
 import { useCart } from "./CartProvider";
 
-const CATEGORIES = ["Semua", "Pakan Akuakultur", "Produk Pertanian", "Bundle & Starter Kit"] as const;
+const CATEGORIES = ["Semua", "Pakan Akuakultur", "Produk Pertanian"] as const;
 const SORTS = ["Terpopuler", "Harga Terendah", "Rating Tertinggi"] as const;
 
 export default function MarketplaceClient() {
@@ -92,6 +92,14 @@ export default function MarketplaceClient() {
                 <span className="overline">{p.category}</span>
                 <h3 className="prod-name">{p.name}</h3>
                 <span className="prod-brand">{p.brand} · {p.spec}</span>
+                <span
+                  className={`tag ${p.sellerType === "own" ? "tag-info" : "tag-success"}`}
+                  style={{ alignSelf: "flex-start" }}
+                  title={p.sellerNote}
+                >
+                  {p.sellerType === "own" ? "🧪" : "✓"} {p.seller}
+                </span>
+                <span className="prod-brand">{p.sellerNote}</span>
                 <p className="prod-desc">{p.desc}</p>
                 <span className="badge-point" style={{ alignSelf: "flex-start" }}><Leaf size={13} /> +{p.points} pts</span>
                 <div className="prod-foot">

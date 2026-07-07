@@ -154,29 +154,55 @@ export type Product = {
   id: string;
   name: string;
   brand: string;
-  category: "Pakan Akuakultur" | "Produk Pertanian" | "Bundle & Starter Kit";
+  category: "Pakan Akuakultur" | "Produk Pertanian";
   price: number;
   points: number;
   rating: number;
   reviews: number;
   desc: string;
   spec: string;
+  /** Siapa yang menjual produk ini */
+  seller: string;
+  /** Catatan model penjualan / verifikasi kualitas */
+  sellerNote: string;
+  /** "own" = diproduksi Shrimp Loop, "verified" = produk mitra terverifikasi */
+  sellerType: "own" | "verified";
   tag?: string;
 };
 
 export const PRODUCTS: Product[] = [
-  { id: "p1", name: "Pakan Ikan Pelet Premium", brand: "AquaFeed 10 kg", category: "Pakan Akuakultur", price: 185000, points: 185, rating: 4.8, reviews: 132, desc: "Tinggi protein 42%. Cocok untuk udang & bandeng.", spec: "Protein 42% · Lemak 6% · Serat 4%", tag: "Terlaris" },
-  { id: "p2", name: "Pakan Udang Vaname", brand: "AquaFeed 25 kg", category: "Pakan Akuakultur", price: 410000, points: 410, rating: 4.7, reviews: 88, desc: "Formula pertumbuhan cepat dengan tepung limbah udang.", spec: "Protein 38% · Probiotik +" },
-  { id: "p3", name: "Pakan Kepiting / Rajungan", brand: "AquaFeed 10 kg", category: "Pakan Akuakultur", price: 175000, points: 175, rating: 4.6, reviews: 41, desc: "Pelet tenggelam khusus krustasea.", spec: "Protein 40% · Kalsium tinggi" },
-  { id: "p4", name: "Suplemen Probiotik Akuakultur", brand: "BioShrimp 1 L", category: "Pakan Akuakultur", price: 95000, points: 95, rating: 4.9, reviews: 57, desc: "Menjaga kualitas air & pencernaan.", spec: "Bakteri baik 10⁹ CFU/ml" },
-  { id: "p5", name: "Kitosan Murni (Serbuk)", brand: "ChitoPure 1 kg", category: "Produk Pertanian", price: 210000, points: 210, rating: 4.9, reviews: 76, desc: "Biostimulan & fungisida alami. Derajat deasetilasi tinggi.", spec: "DD ≥ 85% · larut asam lemah", tag: "Unggulan" },
-  { id: "p6", name: "Pupuk Organik Cair GreenShrimp", brand: "GreenShrimp 5 L", category: "Produk Pertanian", price: 120000, points: 120, rating: 4.7, reviews: 143, desc: "Nutrisi lengkap dari fermentasi limbah udang.", spec: "Dosis 10 ml/L air/minggu" },
-  { id: "p7", name: "Biostimulan Hortikultura", brand: "GrowKit 1 L", category: "Produk Pertanian", price: 98000, points: 98, rating: 4.6, reviews: 39, desc: "Khusus cabai, tomat, dan bawang.", spec: "0,1–0,2% semprot daun" },
-  { id: "p8", name: "Pelapis Benih Berbasis Kitosan", brand: "SeedCoat 500 g", category: "Produk Pertanian", price: 85000, points: 85, rating: 4.5, reviews: 22, desc: "Meningkatkan daya kecambah & proteksi benih.", spec: "Aplikasi pra-tanam" },
-  { id: "p9", name: "Kit Pemula Tambak Udang", brand: "Starter Bundle", category: "Bundle & Starter Kit", price: 350000, points: 400, rating: 4.8, reviews: 30, desc: "Pakan + probiotik + panduan budidaya.", spec: "Hemat 15% vs satuan", tag: "Bundle" },
-  { id: "p10", name: "Kit Pemula Kebun Organik", brand: "Starter Bundle", category: "Bundle & Starter Kit", price: 240000, points: 280, rating: 4.7, reviews: 26, desc: "Pupuk cair + kitosan + biostimulan.", spec: "Hemat 18% vs satuan" },
-  { id: "p11", name: "Kit Edukasi + Produk", brand: "Learn Bundle", category: "Bundle & Starter Kit", price: 150000, points: 200, rating: 4.9, reviews: 18, desc: "Sampel produk + akses kursus edukasi.", spec: "Termasuk sertifikat digital" },
-  { id: "p12", name: "Kitosan Industri (Partai Besar)", brand: "B2B min. 10 kg", category: "Produk Pertanian", price: 1900000, points: 1900, rating: 5.0, reviews: 7, desc: "Untuk industri & riset. Harga khusus B2B.", spec: "Min. 10 kg · faktur digital", tag: "B2B" },
+  {
+    id: "p1",
+    name: "Chito Grow",
+    brand: "Kitosan Cair · 1 L",
+    category: "Produk Pertanian",
+    price: 210000,
+    points: 210,
+    rating: 4.9,
+    reviews: 76,
+    desc: "Biostimulan & fungisida alami berbasis kitosan dari cangkang udang. Diolah langsung di laboratorium Shrimp Loop dengan kontrol derajat deasetilasi.",
+    spec: "DD ≥ 85% · larut asam lemah",
+    seller: "Diproduksi & dijual Shrimp Loop",
+    sellerNote: "Diolah dengan alat laboratorium",
+    sellerType: "own",
+    tag: "Produksi Sendiri",
+  },
+  {
+    id: "p2",
+    name: "Aqua Feed",
+    brand: "Pakan Akuakultur · 10 kg",
+    category: "Pakan Akuakultur",
+    price: 185000,
+    points: 185,
+    rating: 4.8,
+    reviews: 132,
+    desc: "Pakan tinggi protein untuk udang & ikan dari mitra produsen. Setiap batch dicek kadar nutrisinya oleh Shrimp Loop; hanya yang lolos kualifikasi yang boleh dijual di sini.",
+    spec: "Protein 42% · Lemak 6% · Serat 4%",
+    seller: "Mitra produsen terverifikasi",
+    sellerNote: "Sudah cek kadar · Lolos kualifikasi Shrimp Loop",
+    sellerType: "verified",
+    tag: "Terverifikasi",
+  },
 ];
 
 // ---------- Green Point ----------

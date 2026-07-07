@@ -26,9 +26,8 @@ export default function Footer() {
         <div>
           <h4 className="footer-head">Produk</h4>
           <ul className="footer-links">
-            <li><Link href="/marketplace">Pakan Akuakultur</Link></li>
-            <li><Link href="/marketplace">Kitosan & Pupuk</Link></li>
-            <li><Link href="/marketplace">Bundle & Starter Kit</Link></li>
+            <li><Link href="/marketplace">Chito Grow</Link></li>
+            <li><Link href="/marketplace">Aqua Feed</Link></li>
             <li><Link href="/langganan">Langganan Produk</Link></li>
           </ul>
         </div>
