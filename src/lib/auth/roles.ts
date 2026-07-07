@@ -1,5 +1,5 @@
 // ============================================================
-// RBAC Shrimp Loop — peran & aturan akses.
+// RBAC EcoShrimp — peran & aturan akses.
 // Sumber kebenaran tunggal untuk "role & akses", dipetakan
 // langsung dari PRD (SHRIMP_LOOP_PRD.md). Referensi §ada di komentar.
 //
@@ -8,7 +8,7 @@
 //   petambak  — Petambak / Pembudidaya Ikan      (Persona 1 & 4)
 //   petani    — Petani Hortikultura              (Persona 3)
 //   lainnya   — Lainnya                          (§7.1 opsi "Lainnya")
-//   admin     — Admin / Operator Shrimp Loop     (Persona 5, internal §5.6)
+//   admin     — Admin / Operator EcoShrimp     (Persona 5, internal §5.6)
 // ============================================================
 
 export const ROLES = ["pengolah", "petambak", "petani", "lainnya", "admin"] as const;
@@ -53,7 +53,7 @@ export const ROLE_META: Record<Role, { label: string; short: string; desc: strin
     icon: "user",
   },
   admin: {
-    label: "Admin / Operator Shrimp Loop",
+    label: "Admin / Operator EcoShrimp",
     short: "Admin",
     desc: "Tim internal — kelola operasional platform.",
     icon: "chart",

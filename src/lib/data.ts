@@ -1,5 +1,5 @@
 // ============================================================
-// Data operasional Shrimp Loop (angka dari PRD & Design System).
+// Data operasional EcoShrimp (angka dari PRD & Design System).
 // Semua angka dampak = data operasional nyata yang dapat dipertanggungjawabkan.
 // ============================================================
 
@@ -12,7 +12,7 @@ export const IMPACT = [
 
 export const FACTS = [
   {
-    stat: "40–60%",
+    stat: "35–50%",
     title: "Bobot udang berakhir jadi limbah",
     body: "Kulit, kepala, dan cangkang yang selama ini dibuang — padahal itu bahan baku kitosan bernilai tinggi.",
   },
@@ -144,7 +144,7 @@ export const TESTIMONIALS = [
     name: "Pak Ridwan",
     role: "Petani Cabai · Aceh Tengah",
     quote:
-      "Awalnya ragu pupuk organik. Setelah pakai pupuk cair Shrimp Loop di kebun cabai, hasilnya nyata dan harganya jauh lebih hemat.",
+      "Awalnya ragu pupuk organik. Setelah pakai pupuk cair EcoShrimp di kebun cabai, hasilnya nyata dan harganya jauh lebih hemat.",
     initial: "R",
   },
 ] as const;
@@ -165,7 +165,7 @@ export type Product = {
   seller: string;
   /** Catatan model penjualan / verifikasi kualitas */
   sellerNote: string;
-  /** "own" = diproduksi Shrimp Loop, "verified" = produk mitra terverifikasi */
+  /** "own" = diproduksi EcoShrimp, "verified" = produk mitra terverifikasi */
   sellerType: "own" | "verified";
   tag?: string;
 };
@@ -180,10 +180,10 @@ export const PRODUCTS: Product[] = [
     points: 210,
     rating: 4.9,
     reviews: 76,
-    desc: "Biostimulan & fungisida alami berbasis kitosan dari cangkang udang. Diolah langsung di laboratorium Shrimp Loop dengan kontrol derajat deasetilasi.",
+    desc: "Pupuk hayati berbasis kitosan dari cangkang udang — sekaligus biostimulan & fungisida alami. Diproduksi langsung oleh pusat pengolahan EcoShrimp dengan kontrol derajat deasetilasi.",
     spec: "DD ≥ 85% · larut asam lemah",
-    seller: "Diproduksi & dijual Shrimp Loop",
-    sellerNote: "Diolah dengan alat laboratorium",
+    seller: "Diproduksi & dijual EcoShrimp",
+    sellerNote: "Diolah di pusat pengolahan EcoShrimp",
     sellerType: "own",
     tag: "Produksi Sendiri",
   },
@@ -196,12 +196,12 @@ export const PRODUCTS: Product[] = [
     points: 185,
     rating: 4.8,
     reviews: 132,
-    desc: "Pakan tinggi protein untuk udang & ikan dari mitra produsen. Setiap batch dicek kadar nutrisinya oleh Shrimp Loop; hanya yang lolos kualifikasi yang boleh dijual di sini.",
+    desc: "Pakan budidaya tinggi protein untuk udang & ikan yang diproduksi masyarakat/UMKM. Setiap batch melewati Quality Control EcoShrimp; hanya yang lolos standar mendapat label EcoShrimp Certified.",
     spec: "Protein 42% · Lemak 6% · Serat 4%",
-    seller: "Mitra produsen terverifikasi",
-    sellerNote: "Sudah cek kadar · Lolos kualifikasi Shrimp Loop",
+    seller: "Produsen masyarakat · lolos QC",
+    sellerNote: "Lolos Quality Control · EcoShrimp Certified",
     sellerType: "verified",
-    tag: "Terverifikasi",
+    tag: "EcoShrimp Certified",
   },
 ];
 
@@ -227,7 +227,7 @@ export const REWARDS = [
   { reward: "Gratis ongkir 1 pengiriman", cost: 300 },
   { reward: "1 kg kitosan", cost: 2000 },
   { reward: "5 kg pakan ikan", cost: 1500 },
-  { reward: "Merchandise Shrimp Loop (totebag)", cost: 1000 },
+  { reward: "Merchandise EcoShrimp (totebag)", cost: 1000 },
   { reward: 'Sertifikat digital "Green Partner"', cost: 800 },
 ] as const;
 

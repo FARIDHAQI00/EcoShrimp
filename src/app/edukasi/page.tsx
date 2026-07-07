@@ -7,7 +7,7 @@ import { Book, Recycle, Leaf, Fish, Sparkles, Star } from "@/components/Icons";
 import { KITOSAN_STEPS } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Edukasi & Konsultasi AI SHRIMY — Shrimp Loop",
+  title: "Edukasi & Konsultasi AI SHRIMY — EcoShrimp",
   description: "Pusat edukasi pengolahan limbah udang: video tutorial, panduan, diagram proses interaktif, dan Konsultasi AI SHRIMY 24 jam.",
 };
 
@@ -101,7 +101,7 @@ export default function EdukasiPage() {
                   <div className="consult-q">
                     <AskChip question="Udang saya mati mendadak, kenapa ya?" />
                     <AskChip question="Bagaimana cara membuat pakan udang dari cangkang udang?" />
-                    <AskChip question="Saya mau bicara dengan tim Shrimp Loop" />
+                    <AskChip question="Saya mau bicara dengan tim EcoShrimp" />
                   </div>
                   <div className="mt-6"><AskChip variant="cta" label="Mulai Konsultasi" /></div>
                 </div>

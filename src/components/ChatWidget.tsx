@@ -114,7 +114,7 @@ export default function ChatWidget() {
             <span className="chat-avatar"><Shrimy size={34} /></span>
             <div>
               <div className="chat-title">SHRIMY</div>
-              <div className="chat-status"><span className="dot" />Asisten AI Shrimp Loop</div>
+              <div className="chat-status"><span className="dot" />Asisten AI EcoShrimp</div>
             </div>
             <button className="chat-close" onClick={() => setOpen(false)} aria-label="Tutup chat">
               <X size={18} />

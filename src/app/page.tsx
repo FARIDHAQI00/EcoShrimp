@@ -33,7 +33,7 @@ export default function HomePage() {
               </h1>
               <p className="hero-lead hero-subtext">
                 Setiap hari <strong>±12 ton</strong> kulit, kepala, dan cangkang udang di
-                Aceh terbuang tanpa diolah. Shrimp Loop menutup lingkaran itu — menjadi
+                Aceh terbuang tanpa diolah. EcoShrimp menutup lingkaran itu — menjadi
                 kitosan, pakan, dan pupuk yang kembali menghidupi tambak dan kebun.
               </p>
               <div className="hero-cta-row hero-cta">

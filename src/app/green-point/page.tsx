@@ -4,7 +4,7 @@ import { Coins, Leaf, Check } from "@/components/Icons";
 import { POINT_EARN, LEVELS, REWARDS } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Green Point — Shrimp Loop",
+  title: "Green Point — EcoShrimp",
   description: "Sistem insentif Green Point: kumpulkan poin dari setiap aktivitas, naik level, dan tukar dengan reward.",
 };
 

@@ -4,7 +4,7 @@ import { Boxes, Check } from "@/components/Icons";
 import { PACKAGES, formatRupiah } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Langganan — Shrimp Loop",
+  title: "Langganan — EcoShrimp",
   description: "Layanan berlangganan produk olahan limbah udang dengan harga 15–20% lebih hemat, dikirim rutin.",
 };
 

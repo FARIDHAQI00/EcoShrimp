@@ -5,7 +5,7 @@
 
 export const WA_CS = process.env.NEXT_PUBLIC_WA_CS || "6281234567890";
 
-export const SHRIMY_SYSTEM_PROMPT = `Kamu adalah SHRIMY, maskot sekaligus asisten AI Shrimp Loop — platform ekonomi sirkular limbah udang di Aceh. Kamu digambarkan sebagai seekor udang ramah yang tubuhnya membentuk loop.
+export const SHRIMY_SYSTEM_PROMPT = `Kamu adalah SHRIMY, maskot sekaligus asisten AI EcoShrimp — platform ekonomi sirkular limbah udang di Aceh. Kamu digambarkan sebagai seekor udang ramah yang tubuhnya membentuk loop.
 
 PERSONA & GAYA:
 - Ramah, sabar, membumi, sedikit jenaka. Kamu pemandu, bukan badut.
@@ -27,7 +27,7 @@ BASIS PENGETAHUAN (jawab HANYA dari sini; jangan mengarang angka di luar ini):
 6) GREEN POINT & LEVEL: Newcomer (0–499), Green Member (500–1.999, diskon 5%), Ocean Keeper (2.000–4.999, diskon 10% + gratis ongkir), Coral Champion (5.000+, diskon 15% + prioritas penjemputan).
 
 ATURAN ESKALASI:
-- Untuk pertanyaan di luar cakupan, kasus serius (mis. wabah penyakit tambak, udang mati massal mendadak), atau permintaan bicara dengan tim, arahkan pengguna menghubungi tim Shrimp Loop via WhatsApp (nomor akan ditampilkan aplikasi). Jangan memberi diagnosis medis/veteriner yang berisiko.
+- Untuk pertanyaan di luar cakupan, kasus serius (mis. wabah penyakit tambak, udang mati massal mendadak), atau permintaan bicara dengan tim, arahkan pengguna menghubungi tim EcoShrimp via WhatsApp (nomor akan ditampilkan aplikasi). Jangan memberi diagnosis medis/veteriner yang berisiko.
 - Jangan berjanji hal di luar aturan platform. Jika tidak tahu, akui dan arahkan ke tim.`;
 
 export const SUGGESTIONS = [
@@ -38,14 +38,14 @@ export const SUGGESTIONS = [
 ];
 
 export const GREETING =
-  "Halo! Aku SHRIMY 🦐 asisten Shrimp Loop. Mau tanya soal jual limbah, produk, atau cara pengolahan? Tanya aku, ya!";
+  "Halo! Aku SHRIMY 🦐 asisten EcoShrimp. Mau tanya soal jual limbah, produk, atau cara pengolahan? Tanya aku, ya!";
 
 export type ChatMessage = { role: "user" | "assistant"; content: string };
 
 // Fallback grounded — dipakai saat Claude API tidak tersedia (tanpa kunci / galat).
 export function groundedFallback(input: string): string {
   const q = input.toLowerCase();
-  const waLine = `\n\nKalau butuh bantuan langsung tim Shrimp Loop, hubungi WhatsApp kami di +${WA_CS} ya. 🙌`;
+  const waLine = `\n\nKalau butuh bantuan langsung tim EcoShrimp, hubungi WhatsApp kami di +${WA_CS} ya. 🙌`;
 
   if (/(mati|wabah|penyakit|sakit|mendadak|massal)/.test(q)) {
     return (
@@ -75,7 +75,7 @@ export function groundedFallback(input: string): string {
     return "Ada layanan Langganan biar produk dikirim rutin dan hemat 15–20%. Contoh: Tambak Starter (50 kg pakan) Rp 350.000/bln, Kebun Hijau (20 L pupuk) Rp 180.000/bln, sampai Full Circle seluruh lini produk. Bisa dijeda atau batal kapan saja. 📦";
   }
   if (/(tim|cs|admin|manusia|bicara|kontak|whatsapp)/.test(q)) {
-    return "Siap, aku sambungkan ke tim Shrimp Loop." + waLine;
+    return "Siap, aku sambungkan ke tim EcoShrimp." + waLine;
   }
   if (/(halo|hai|hi|assalam|pagi|siang|sore|malam)/.test(q)) {
     return GREETING;

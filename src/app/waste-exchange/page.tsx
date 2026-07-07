@@ -6,7 +6,7 @@ import { WasteBox, ArrowRight } from "@/components/Icons";
 import { WASTE_PRICES, WASTE_HISTORY, WASTE_STEPS } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Waste Exchange — Shrimp Loop",
+  title: "Waste Exchange — EcoShrimp",
   description: "Bursa limbah dua arah: daftarkan limbah udang, kami jemput terjadwal, dan dapatkan uang tunai atau Green Point.",
 };
 

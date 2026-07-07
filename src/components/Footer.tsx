@@ -10,7 +10,7 @@ export default function Footer() {
         <div>
           <div className="flex items-center gap-3" style={{ marginBottom: 12 }}>
             <Shrimy size={40} />
-            <span className="nav-wordmark" style={{ color: "#fff" }}>Shrimp Loop</span>
+            <span className="nav-wordmark" style={{ color: "#fff" }}>EcoShrimp</span>
           </div>
           <p className="footer-tag">Dari Limbah Menjadi Nilai.<br />Dari Laut Kembali ke Laut.</p>
           <a
@@ -54,7 +54,7 @@ export default function Footer() {
       </div>
 
       <div className="container footer-bottom">
-        <span>© 2026 Shrimp Loop · Marketplace Digital Berbasis Circular Economy</span>
+        <span>© 2026 EcoShrimp · Marketplace Digital Berbasis Circular Economy</span>
         <span>Versi 1.1 · UTU Awards 2026</span>
       </div>
     </footer>

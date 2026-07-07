@@ -10,20 +10,20 @@ import { AuthProvider } from "@/components/AuthProvider";
 import { CartProvider } from "@/components/CartProvider";
 
 export const metadata: Metadata = {
-  title: "Shrimp Loop — Dari Limbah Menjadi Nilai",
+  title: "EcoShrimp — Dari Limbah Menjadi Nilai",
   description:
-    "Platform digital ekonomi sirkular yang mengubah limbah udang Aceh menjadi kitosan, pakan akuakultur, dan pupuk organik. UTU Awards 2026 · Universitas Teuku Umar.",
-  keywords: ["kitosan", "limbah udang", "ekonomi sirkular", "Aceh", "pakan ikan", "pupuk organik", "Shrimp Loop"],
-  authors: [{ name: "Tim Shrimp Loop · Universitas Teuku Umar" }],
+    "Marketplace digital berbasis circular economy yang mengubah limbah udang menjadi Chito Grow (pupuk hayati kitosan) dan Aqua Feed (pakan budidaya). UTU Awards 2026 · Universitas Teuku Umar.",
+  keywords: ["Chito Grow", "Aqua Feed", "kitosan", "limbah udang", "circular economy", "Aceh", "EcoShrimp"],
+  authors: [{ name: "Tim EcoShrimp · Universitas Teuku Umar" }],
   openGraph: {
-    title: "Shrimp Loop — Dari Limbah Menjadi Nilai. Dari Laut Kembali ke Laut.",
+    title: "EcoShrimp — Dari Limbah Menjadi Nilai. Dari Laut Kembali ke Laut.",
     description: "Ekosistem agro-marina sirkular digital di Aceh.",
     type: "website",
   },
 };
 
 export const viewport: Viewport = {
-  themeColor: "#C93B1B",
+  themeColor: "#F75E28",
   width: "device-width",
   initialScale: 1,
 };

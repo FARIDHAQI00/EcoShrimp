@@ -63,7 +63,7 @@ function DaftarContent() {
       <div className="container auth-container">
         <div className="auth-head">
           <Shrimy size={52} />
-          <span className="eyebrow mt-4">Bergabung dengan Shrimp Loop</span>
+          <span className="eyebrow mt-4">Bergabung dengan EcoShrimp</span>
           <h1>Daftar akun</h1>
           <p>Satu ekosistem untuk limbah bernilai, produk terjangkau, dan Green Point.</p>
         </div>

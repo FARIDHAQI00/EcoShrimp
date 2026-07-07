@@ -42,9 +42,9 @@ export default function Navbar() {
   return (
     <header className={`nav-desktop ${scrolled ? "scrolled" : ""}`}>
       <div className="container nav-inner">
-        <Link href="/" className="nav-brand" aria-label="Shrimp Loop — Beranda">
+        <Link href="/" className="nav-brand" aria-label="EcoShrimp — Beranda">
           <Shrimy size={38} />
-          <span className="nav-wordmark">Shrimp Loop</span>
+          <span className="nav-wordmark">EcoShrimp</span>
         </Link>
 
         <nav className="nav-links" aria-label="Navigasi utama">

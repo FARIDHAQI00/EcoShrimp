@@ -1,5 +1,5 @@
 // ============================================================
-// User store Shrimp Loop — persisten berbasis file JSON (.data/users.json)
+// User store EcoShrimp — persisten berbasis file JSON (.data/users.json)
 // dengan cache in-memory. Cukup untuk prototipe MVP; di produksi
 // diganti PostgreSQL (PRD §8.2). Hanya dipakai di runtime Node.
 // ============================================================
@@ -61,7 +61,7 @@ function seed(): User[] {
     createdAt: now,
   });
   return [
-    mk("Operator Shrimp Loop", "0811000000", "admin", "Banda Aceh", "admin1234"),
+    mk("Operator EcoShrimp", "0811000000", "admin", "Banda Aceh", "admin1234"),
     mk("Bu Sarah", "0812000001", "pengolah", "Banda Aceh", "demo1234", 240),
     mk("Pak Hasan", "0812000002", "petambak", "Aceh Besar", "demo1234", 1250),
     mk("Pak Ridwan", "0812000003", "petani", "Aceh Tengah", "demo1234", 60),

@@ -3,7 +3,7 @@ import MarketplaceClient from "@/components/MarketplaceClient";
 import { Bag } from "@/components/Icons";
 
 export const metadata: Metadata = {
-  title: "Marketplace — Shrimp Loop",
+  title: "Marketplace — EcoShrimp",
   description: "Produk hasil olahan limbah udang: pakan akuakultur, kitosan, pupuk organik, dan bundle starter kit.",
 };
 
