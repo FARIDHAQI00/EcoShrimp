@@ -79,7 +79,7 @@ export function ShrimyDefs() {
         </filter>
       </defs>
 
-      <symbol id="shrimy-core" viewBox="0 0 240 240">
+      <symbol id="shrimy-core" viewBox="0 0 240 240" overflow="visible">
         {/* bayangan kontak berlapis (ground) — dibake terpisah dari body */}
         <ellipse cx="122" cy="214" rx="74" ry="13" fill="rgba(110,52,32,0.28)" filter="url(#sl-soft)" />
         <ellipse cx="122" cy="215" rx="44" ry="8" fill="rgba(88,36,20,0.30)" filter="url(#sl-soft)" />
