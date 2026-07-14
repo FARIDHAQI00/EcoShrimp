@@ -7,7 +7,7 @@ import { Book, Recycle, Leaf, Fish, Sparkles, Star } from "@/components/Icons";
 import { KITOSAN_STEPS } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Edukasi & Konsultasi AI SHRIMY — EcoShrimp",
+  title: "Edukasi & Konsultasi AI SHRIMY: EcoShrimp",
   description: "Pusat edukasi pengolahan limbah udang: video tutorial, panduan, diagram proses interaktif, dan Konsultasi AI SHRIMY 24 jam.",
 };
 
@@ -28,7 +28,7 @@ const HUB = [
     title: "Penggunaan Produk",
     items: [
       "Aplikasi Kitosan untuk Tanaman Cabai",
-      "Dosis & Aplikasi Pupuk Organik Cair",
+      "Dosis & Aplikasi Chito Grow",
       "Formulasi Pakan Ikan yang Tepat",
       "Tips Penyimpanan Produk",
     ],
@@ -46,7 +46,7 @@ const HUB = [
 
 const FAQ = [
   { q: "Berapa lama proses pembuatan kitosan?", a: "Empat tahap: persiapan, demineralisasi (±2 jam), deproteinisasi (±2 jam), dan deasetilasi (±5 jam), masing-masing diikuti pencucian dan pengeringan 80°C selama 24 jam. Dari 10 kg cangkang kering dihasilkan ±1,5–2,5 kg kitosan." },
-  { q: "Apakah pupuk organik cair aman untuk semua tanaman?", a: "Ya. Gunakan dosis 10 ml per liter air, disiram seminggu sekali. Untuk cabai dan hortikultura, kombinasikan dengan kitosan 0,1–0,2% semprot daun untuk hasil terbaik." },
+  { q: "Apakah Chito Grow aman untuk semua tanaman?", a: "Ya. Gunakan dosis 10 ml per liter air, disiram seminggu sekali. Untuk cabai dan hortikultura, kombinasikan dengan semprot daun 0,1–0,2% untuk hasil terbaik." },
   { q: "Bagaimana jika saya baru pertama kali mengolah limbah?", a: "Tenang! Tonton video tutorial 3–10 menit, ikuti infografis langkah demi langkah, atau langsung tanya SHRIMY kapan saja. Anda juga mendapat Green Point setiap menyelesaikan konten edukasi." },
 ];
 
@@ -96,7 +96,7 @@ export default function EdukasiPage() {
                   </span>
                   <h2 className="section-title" style={{ color: "#fff", marginTop: 14 }}>Bingung? Tanya SHRIMY 24 jam.</h2>
                   <p style={{ color: "#C49484", marginTop: 10 }}>
-                    Panduan pengolahan, rekomendasi produk, troubleshooting, hingga navigasi platform — dijawab ramah dalam bahasa Indonesia.
+                    Panduan pengolahan, rekomendasi produk, troubleshooting, hingga navigasi platform, dijawab ramah dalam bahasa Indonesia.
                   </p>
                   <div className="consult-q">
                     <AskChip question="Udang saya mati mendadak, kenapa ya?" />

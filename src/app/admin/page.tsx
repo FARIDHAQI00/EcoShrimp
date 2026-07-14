@@ -5,7 +5,7 @@ import { Chart, Truck, Factory, Boxes, Users, Coins } from "@/components/Icons";
 import { ADMIN_STATS, ADMIN_PICKUPS, ADMIN_PRODUCTION, ADMIN_INVENTORY } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Admin & Operations Dashboard — EcoShrimp",
+  title: "Admin & Operations Dashboard: EcoShrimp",
   description: "Panel kendali internal: manajemen penjemputan limbah, produksi, inventori, dan analitik bisnis.",
 };
 
@@ -18,7 +18,7 @@ export default function AdminPage() {
         <div className="page-hero">
           <span className="eyebrow"><Chart size={14} /> Admin & Operations Dashboard</span>
           <h1>Kendali penuh operasional EcoShrimp.</h1>
-          <p>Dari koordinasi penjemputan, pelacakan produksi, hingga analitik dampak lingkungan — dalam satu panel real-time.</p>
+          <p>Dari koordinasi penjemputan, pelacakan produksi, hingga analitik dampak lingkungan, dalam satu panel real-time.</p>
         </div>
 
         {/* Analytics */}

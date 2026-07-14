@@ -118,7 +118,7 @@ function DaftarContent() {
           </div>
 
           <div className="mt-4">
-            <label className="label" htmlFor="email">Email <span className="text-muted">(opsional — untuk invoice)</span></label>
+            <label className="label" htmlFor="email">Email <span className="text-muted">(opsional, untuk invoice)</span></label>
             <input id="email" className="input" type="email" value={email} onChange={(e) => setEmail(e.target.value)}
               placeholder="nama@email.com" autoComplete="email" />
           </div>

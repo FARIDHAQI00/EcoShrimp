@@ -10,13 +10,13 @@ import { AuthProvider } from "@/components/AuthProvider";
 import { CartProvider } from "@/components/CartProvider";
 
 export const metadata: Metadata = {
-  title: "EcoShrimp — Dari Limbah Menjadi Nilai",
+  title: "EcoShrimp: Dari Limbah Menjadi Nilai",
   description:
     "Marketplace digital berbasis circular economy yang mengubah limbah udang menjadi Chito Grow (pupuk hayati kitosan) dan Aqua Feed (pakan budidaya). UTU Awards 2026 · Universitas Teuku Umar.",
   keywords: ["Chito Grow", "Aqua Feed", "kitosan", "limbah udang", "circular economy", "Aceh", "EcoShrimp"],
   authors: [{ name: "Tim EcoShrimp · Universitas Teuku Umar" }],
   openGraph: {
-    title: "EcoShrimp — Dari Limbah Menjadi Nilai. Dari Laut Kembali ke Laut.",
+    title: "EcoShrimp: Dari Limbah Menjadi Nilai. Dari Laut Kembali ke Laut.",
     description: "Ekosistem agro-marina sirkular digital di Aceh.",
     type: "website",
   },

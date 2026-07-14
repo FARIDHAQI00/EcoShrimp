@@ -49,13 +49,13 @@ export const ROLE_META: Record<Role, { label: string; short: string; desc: strin
   lainnya: {
     label: "Lainnya",
     short: "Lainnya",
-    desc: "Umum — jelajah produk, edukasi, dan Green Point.",
+    desc: "Umum, jelajah produk, edukasi, dan Green Point.",
     icon: "user",
   },
   admin: {
     label: "Admin / Operator EcoShrimp",
     short: "Admin",
-    desc: "Tim internal — kelola operasional platform.",
+    desc: "Tim internal, kelola operasional platform.",
     icon: "chart",
   },
 };

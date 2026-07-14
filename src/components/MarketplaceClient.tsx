@@ -109,7 +109,7 @@ export default function MarketplaceClient() {
                   style={{ alignSelf: "flex-start" }}
                   title={p.sellerNote}
                 >
-                  {p.sellerType === "own" ? "🧪" : "✓"} {p.seller}
+                  {p.seller}
                 </span>
                 <span className="prod-brand">{p.sellerNote}</span>
                 <p className="prod-desc">{p.desc}</p>

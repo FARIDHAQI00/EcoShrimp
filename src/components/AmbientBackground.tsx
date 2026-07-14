@@ -6,15 +6,15 @@ import { useState, useCallback, useEffect, useRef } from "react";
 /* ---- Sapaan random saat udang disentuh ---- */
 const GREETINGS = [
   "Halo! 🦐 Aku udang EcoShrimp!",
-  "Hai! Jangan buang limbahku ya! ♻️",
-  "Yuk olah limbah udang! 💪",
-  "Selamat datang di lautan! 🌊",
-  "Aku bisa jadi kitosan lho! ✨",
-  "Kulit udang = emas hijau! 💚",
-  "Bantu jaga lautku ya! 🐚",
-  "Limbah udang bernilai tinggi! 💎",
-  "Hi! Ayo daur ulang! 🔄",
-  "Salam dari dasar laut! 🫧",
+  "Hai! Jangan buang limbahku ya!",
+  "Yuk olah limbah udang!",
+  "Selamat datang di lautan!",
+  "Aku bisa jadi kitosan lho!",
+  "Kulit udang = emas hijau!",
+  "Bantu jaga lautku ya!",
+  "Limbah udang bernilai tinggi!",
+  "Hi! Ayo daur ulang!",
+  "Salam dari dasar laut!",
 ];
 
 /* ---- Komponen Udang SVG yang keren & interaktif ---- */
@@ -259,10 +259,10 @@ function CuteShrimp({
       {/* Efek sparkle saat excited */}
       {isExcited && (
         <div className="shrimp-sparkles">
-          <span className="sparkle sp1">✨</span>
-          <span className="sparkle sp2">💫</span>
-          <span className="sparkle sp3">⭐</span>
-          <span className="sparkle sp4">✨</span>
+          <span className="sparkle sp1" />
+          <span className="sparkle sp2" />
+          <span className="sparkle sp3" />
+          <span className="sparkle sp4" />
         </div>
       )}
     </div>

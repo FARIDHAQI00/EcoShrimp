@@ -38,7 +38,7 @@ export default function WasteForm() {
           kulit/kepala udang (PRD §5.1). Peran Anda saat ini <strong>{ROLE_META[user.role].short}</strong>.
         </p>
         <p className="text-secondary mt-2">
-          Sebagai gantinya, Anda bisa berbelanja produk olahan limbah — pakan, kitosan, dan pupuk.
+          Sebagai gantinya, Anda bisa berbelanja produk olahan limbah, pakan, kitosan, dan pupuk.
         </p>
         <Link href="/marketplace" className="btn btn-secondary mt-4"><Bag size={16} /> Ke Marketplace</Link>
       </div>

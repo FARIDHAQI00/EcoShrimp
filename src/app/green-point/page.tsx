@@ -4,7 +4,7 @@ import { Coins, Leaf, Check } from "@/components/Icons";
 import { POINT_EARN, LEVELS, REWARDS } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Green Point — EcoShrimp",
+  title: "Green Point: EcoShrimp",
   description: "Sistem insentif Green Point: kumpulkan poin dari setiap aktivitas, naik level, dan tukar dengan reward.",
 };
 
@@ -46,7 +46,7 @@ export default function GreenPointPage() {
               <span>Green Member (500)</span>
               <span>Ocean Keeper (2.000)</span>
             </div>
-            <p style={{ marginTop: 14, fontWeight: 600 }}>760 poin lagi menuju Ocean Keeper — gratis ongkir menanti! 🚀</p>
+            <p style={{ marginTop: 14, fontWeight: 600 }}>760 poin lagi menuju Ocean Keeper, gratis ongkir menanti!</p>
           </div>
         </Reveal>
 

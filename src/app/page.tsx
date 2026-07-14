@@ -4,7 +4,7 @@ import Reveal from "@/components/Reveal";
 import CountUp from "@/components/CountUp";
 import ProcessDiagram from "@/components/ProcessDiagram";
 import AskChip from "@/components/AskChip";
-import { ArrowRight, Recycle, Leaf, Fish, Drop, Water, Star, Sparkles } from "@/components/Icons";
+import { ArrowRight, Recycle, Leaf, Fish, Drop, Star, Sparkles } from "@/components/Icons";
 import {
   IMPACT,
   FACTS,
@@ -14,7 +14,7 @@ import {
   TESTIMONIALS,
 } from "@/lib/data";
 
-const APP_ICONS = { leaf: Leaf, fish: Fish, drop: Drop, water: Water } as const;
+const APP_ICONS = { fish: Fish, drop: Drop } as const;
 
 export default function HomePage() {
   return (
@@ -106,7 +106,7 @@ export default function HomePage() {
               <span className="overline">Cara Kerja</span>
               <h2 className="section-title mt-2">Tiga langkah menutup lingkaran.</h2>
               <p className="section-lead mt-2">
-                Dari dapur restoran hingga kembali ke tambak dan kebun — setiap langkah memberi Green Point.
+                Dari dapur restoran hingga kembali ke tambak dan kebun, setiap langkah memberi Green Point.
               </p>
             </div>
           </Reveal>
@@ -149,11 +149,11 @@ export default function HomePage() {
           <Reveal>
             <div className="section-head">
               <span className="overline">Aplikasi Produk</span>
-              <h2 className="section-title mt-2">Satu limbah, empat manfaat nyata.</h2>
-              <p className="section-lead mt-2">Lengkap dengan dosis praktis — bukan sekadar nama produk.</p>
+              <h2 className="section-title mt-2">Satu limbah, dua produk nyata.</h2>
+              <p className="section-lead mt-2">Lengkap dengan dosis praktis, bukan sekadar nama produk.</p>
             </div>
           </Reveal>
-          <div className="grid grid-4 mt-8">
+          <div className="grid grid-2 mt-8">
             {APPLICATIONS.map((a, i) => {
               const Icon = APP_ICONS[a.icon as keyof typeof APP_ICONS];
               return (
@@ -221,17 +221,19 @@ export default function HomePage() {
           <div className="grid grid-3 mt-8">
             {TESTIMONIALS.map((t, i) => (
               <Reveal key={t.name} delay={((i % 3) + 1) as 1 | 2 | 3}>
-                <div className="card testi-card">
-                  <span className="stars">
-                    {Array.from({ length: 5 }).map((_, k) => <Star key={k} size={16} />)}
-                  </span>
-                  <p className="testi-quote mt-3">“{t.quote}”</p>
-                  <div className="testi-who">
-                    <span className="testi-avatar">{t.initial}</span>
-                    <span>
-                      <span className="testi-name" style={{ display: "block" }}>{t.name}</span>
-                      <span className="testi-role">{t.role}</span>
+                <div className="testi-drift">
+                  <div className="card testi-card">
+                    <span className="stars">
+                      {Array.from({ length: 5 }).map((_, k) => <Star key={k} size={16} />)}
                     </span>
+                    <p className="testi-quote mt-3">“{t.quote}”</p>
+                    <div className="testi-who">
+                      <span className="testi-avatar">{t.initial}</span>
+                      <span>
+                        <span className="testi-name" style={{ display: "block" }}>{t.name}</span>
+                        <span className="testi-role">{t.role}</span>
+                      </span>
+                    </div>
                   </div>
                 </div>
               </Reveal>

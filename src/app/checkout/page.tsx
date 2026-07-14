@@ -12,7 +12,7 @@ import { computeOrder } from "@/lib/pricing";
 import { formatRupiah } from "@/lib/data";
 
 const COD_SHIPPING = "COD (Banda Aceh)";
-const COD_PAYMENT = "COD — Bayar di Tempat";
+const COD_PAYMENT = "COD (Bayar di Tempat)";
 const SHIPPING = ["JNE Reguler", "J&T Express", "Kurir Lokal Aceh", COD_SHIPPING];
 const PAYMENT = ["Transfer Bank (BCA/BNI/BRI/Mandiri)", "QRIS", "GoPay", "OVO", "DANA", "ShopeePay", COD_PAYMENT];
 
@@ -203,7 +203,7 @@ function CheckoutContent() {
                   </label>
                 ))}
               </div>
-              {order.level.freeShipping && <span className="pill pill-success mt-3">Gratis ongkir — level {order.level.name}</span>}
+              {order.level.freeShipping && <span className="pill pill-success mt-3">Gratis ongkir, level {order.level.name}</span>}
             </div>
 
             {/* 3. Green Point */}

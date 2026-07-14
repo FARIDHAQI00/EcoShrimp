@@ -42,7 +42,7 @@ export default function Navbar() {
   return (
     <header className={`nav-desktop ${scrolled ? "scrolled" : ""}`}>
       <div className="container nav-inner">
-        <Link href="/" className="nav-brand" aria-label="EcoShrimp — Beranda">
+        <Link href="/" className="nav-brand" aria-label="EcoShrimp: Beranda">
           <Image
             src="/logo.png"
             alt="EcoShrimp"

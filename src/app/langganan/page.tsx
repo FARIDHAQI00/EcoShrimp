@@ -4,7 +4,7 @@ import { Boxes, Check } from "@/components/Icons";
 import { PACKAGES, formatRupiah } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Langganan — EcoShrimp",
+  title: "Langganan: EcoShrimp",
   description: "Layanan berlangganan produk olahan limbah udang dengan harga 15–20% lebih hemat, dikirim rutin.",
 };
 
@@ -24,7 +24,7 @@ export default function LanggananPage() {
         <div className="page-hero">
           <span className="eyebrow"><Boxes size={14} /> Langganan Produk</span>
           <h1>Pasokan rutin, harga lebih hemat.</h1>
-          <p>Produk olahan limbah udang dikirim otomatis ke alamat Anda — 15–20% lebih murah dari harga eceran. Tanpa perlu memesan ulang tiap bulan.</p>
+          <p>Produk olahan limbah udang dikirim otomatis ke alamat Anda, 15–20% lebih murah dari harga eceran. Tanpa perlu memesan ulang tiap bulan.</p>
         </div>
 
         <div className="pkg-grid mt-8">

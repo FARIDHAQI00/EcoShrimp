@@ -34,7 +34,7 @@ export default function KeranjangPage() {
           <div className="card panel mt-6" style={{ textAlign: "center", padding: 40 }}>
             <Shrimy size={64} />
             <h3 style={{ fontSize: "var(--text-h3)", fontWeight: 700, marginTop: 12 }}>Keranjang masih kosong</h3>
-            <p className="text-secondary mt-2">Jelajahi produk olahan limbah udang — pakan, kitosan, dan pupuk.</p>
+            <p className="text-secondary mt-2">Jelajahi produk olahan limbah udang, pakan, kitosan, dan pupuk.</p>
             <Link href="/marketplace" className="btn btn-gradient mt-4"><Bag size={16} /> Mulai Belanja</Link>
           </div>
         ) : (

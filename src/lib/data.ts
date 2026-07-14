@@ -14,17 +14,17 @@ export const FACTS = [
   {
     stat: "35–50%",
     title: "Bobot udang berakhir jadi limbah",
-    body: "Kulit, kepala, dan cangkang yang selama ini dibuang — padahal itu bahan baku kitosan bernilai tinggi.",
+    body: "Kulit, kepala, dan cangkang udang yang selama ini dibuang, padahal dapat bernilai tinggi jika diolah menjadi Chito Grow.",
   },
   {
     stat: ">USD 6 M",
-    title: "Nilai pasar global kitosan",
+    title: "Nilai pasar global Chito Grow",
     body: "Biopolimer dari cangkang krustasea; dipakai di pertanian, akuakultur, farmasi, hingga pengolahan air.",
   },
   {
     stat: "60–70%",
-    title: "Porsi pakan dari biaya tambak",
-    body: "Pakan komersial menyerap sebagian besar biaya produksi. Pakan dari limbah menekannya hingga 30%.",
+    title: "Porsi Aqua Feed dari biaya tambak",
+    body: "Pakan komersial menyerap sebagian besar biaya produksi. Aqua Feed dari limbah menekannya hingga 30%.",
   },
 ] as const;
 
@@ -38,7 +38,7 @@ export const HOW_IT_WORKS = [
   {
     n: 2,
     title: "Kami Olah",
-    body: "Limbah diproses menjadi kitosan, pakan akuakultur, dan pupuk organik cair dengan SOP & QC ketat.",
+    body: "Limbah diproses menjadi kitosan dan pakan akuakultur dengan SOP & QC ketat.",
     reward: "SOP 4 tahap + uji lab",
   },
   {
@@ -100,28 +100,16 @@ export const KITOSAN_STEPS: ProcessStep[] = [
 
 export const APPLICATIONS = [
   {
-    icon: "leaf",
-    title: "Biostimulan Tanaman",
-    body: "Kitosan memacu pertumbuhan & ketahanan penyakit pada cabai dan hortikultura.",
-    dose: "0,1–0,2% semprot daun, tiap 7–10 hari",
-  },
-  {
-    icon: "fish",
-    title: "Pakan Akuakultur",
-    body: "Tepung limbah udang berprotein tinggi untuk udang, bandeng, dan lele.",
-    dose: "Substitusi 30% tepung ikan dalam formula",
-  },
-  {
     icon: "drop",
-    title: "Pupuk Organik Cair",
-    body: "Nutrisi lengkap untuk tanah, menekan ketergantungan urea & NPK.",
+    title: "Chito Grow",
+    body: "Pupuk hayati berbasis kitosan dari cangkang udang, biostimulan & fungisida alami untuk tanaman.",
     dose: "10 ml / L air, siram tiap minggu",
   },
   {
-    icon: "water",
-    title: "Penjernih Air",
-    body: "Kitosan sebagai koagulan alami mengikat partikel & logam pada air tambak.",
-    dose: "Dosis rendah sesuai kekeruhan air",
+    icon: "fish",
+    title: "Aqua Feed",
+    body: "Pakan budidaya tinggi protein dari limbah udang, kembali menjadi pakan udang, bandeng, dan lele.",
+    dose: "Protein 42% · substitusi 30% tepung ikan",
   },
 ] as const;
 
@@ -182,7 +170,7 @@ export const PRODUCTS: Product[] = [
     points: 210,
     rating: 4.9,
     reviews: 76,
-    desc: "Pupuk hayati berbasis kitosan dari cangkang udang — sekaligus biostimulan & fungisida alami. Diproduksi langsung oleh pusat pengolahan EcoShrimp dengan kontrol derajat deasetilasi.",
+    desc: "Pupuk hayati berbasis kitosan dari cangkang udang, sekaligus biostimulan & fungisida alami. Diproduksi langsung oleh pusat pengolahan EcoShrimp dengan kontrol derajat deasetilasi.",
     spec: "DD ≥ 85% · larut asam lemah",
     seller: "Diproduksi & dijual EcoShrimp",
     sellerNote: "Diolah di pusat pengolahan EcoShrimp",
@@ -220,7 +208,7 @@ export const POINT_EARN = [
 ] as const;
 
 export const LEVELS = [
-  { lvl: 1, name: "Newcomer", threshold: "0–499 pts", benefit: "—", min: 0 },
+  { lvl: 1, name: "Newcomer", threshold: "0–499 pts", benefit: "Belum ada benefit", min: 0 },
   { lvl: 2, name: "Green Member", threshold: "500–1.999 pts", benefit: "Diskon 5%", min: 500 },
   { lvl: 3, name: "Ocean Keeper", threshold: "2.000–4.999 pts", benefit: "Diskon 10% + gratis ongkir", min: 2000 },
   { lvl: 4, name: "Coral Champion", threshold: "5.000+ pts", benefit: "Diskon 15% + prioritas penjemputan", min: 5000 },
@@ -238,7 +226,7 @@ export const REWARDS = [
 // ---------- Langganan ----------
 export const PACKAGES = [
   { name: "Tambak Starter", contents: "50 kg pakan ikan / bulan", normal: 425000, sub: 350000, save: "18%" },
-  { name: "Kebun Hijau", contents: "20 L pupuk cair / bulan", normal: 220000, sub: 180000, save: "18%" },
+  { name: "Kebun Hijau", contents: "20 L Chito Grow / bulan", normal: 220000, sub: 180000, save: "18%" },
   { name: "Kitosan Basic", contents: "5 kg kitosan / bulan", normal: 300000, sub: 250000, save: "17%" },
   { name: "Ocean Pro", contents: "50 kg pakan + 10 kg kitosan / bulan", normal: 710000, sub: 580000, save: "18%", featured: true },
   { name: "Full Circle", contents: "Seluruh lini produk / bulan", normal: 1100000, sub: 880000, save: "20%" },
@@ -261,7 +249,7 @@ export const WASTE_HISTORY = [
 export const WASTE_STEPS = [
   { n: 1, title: "Jenis limbah", body: "Pilih kulit, kepala, cangkang, atau campuran." },
   { n: 2, title: "Estimasi berat", body: "Geser slider atau ketik jumlah (kg). Minimum 2 kg." },
-  { n: 3, title: "Foto (opsional)", body: "Bantu kami menilai kualitas — boleh dilewati." },
+  { n: 3, title: "Foto (opsional)", body: "Bantu kami menilai kualitas, boleh dilewati." },
   { n: 4, title: "Waktu tersedia", body: "Pilih jadwal penjemputan yang tidak mengganggu operasional." },
 ] as const;
 
@@ -283,14 +271,13 @@ export const ADMIN_PICKUPS = [
 export const ADMIN_PRODUCTION = [
   { batch: "KTS-014", input: "120 kg cangkang", output: "24 kg kitosan", rate: "20%", qc: "Lulus" },
   { batch: "PKN-031", input: "300 kg limbah", output: "260 kg pakan", rate: "87%", qc: "Lulus" },
-  { batch: "PPK-022", input: "180 kg limbah", output: "150 L pupuk", rate: "83%", qc: "Proses" },
+  { batch: "PPK-022", input: "180 kg limbah", output: "150 L Chito Grow", rate: "83%", qc: "Proses" },
 ] as const;
 
 export const ADMIN_INVENTORY = [
   { item: "Kitosan Murni", stock: 84, unit: "kg", threshold: 50, tone: "success" },
   { item: "Pakan Ikan Pelet", stock: 32, unit: "kg", threshold: 100, tone: "warning" },
-  { item: "Pupuk Organik Cair", stock: 210, unit: "L", threshold: 80, tone: "success" },
-  { item: "Biostimulan", stock: 12, unit: "L", threshold: 30, tone: "error" },
+  { item: "Chito Grow", stock: 210, unit: "L", threshold: 80, tone: "success" },
 ] as const;
 
 export function formatRupiah(n: number): string {

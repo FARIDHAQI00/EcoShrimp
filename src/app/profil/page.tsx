@@ -66,7 +66,7 @@ export default function ProfilPage() {
             </div>
             <div className="glass" style={{ padding: 14 }}>
               <div className="text-muted" style={{ fontSize: "var(--text-caption)" }}>Email</div>
-              <div style={{ color: "var(--color-text-primary)" }}>{user.email || "—"}</div>
+              <div style={{ color: "var(--color-text-primary)" }}>{user.email || "Belum diisi"}</div>
             </div>
           </div>
         </div>
