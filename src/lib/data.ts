@@ -176,7 +176,7 @@ export const PRODUCTS: Product[] = [
     sellerNote: "Diolah di pusat pengolahan EcoShrimp",
     sellerType: "own",
     tag: "Produksi Sendiri",
-    image: "/products/chito-grow.jpg",
+    image: "/products/citogrow.jpeg",
   },
   {
     id: "p2",
