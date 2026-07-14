@@ -1403,11 +1403,22 @@ ul { margin: 0; padding: 0; list-style: none; }
 /* ============================================================
    10.4 ANIMATIONS: reveal, count, skeleton, hero
    ============================================================ */
-.sr { opacity: 0; transform: translateY(28px); transition: opacity .7s var(--ease-decelerate), transform .7s var(--ease-decelerate); }
-.sr.in { opacity: 1; transform: none; }
-.sr.d1 { transition-delay: .08s; }
-.sr.d2 { transition-delay: .16s; }
-.sr.d3 { transition-delay: .24s; }
+/* Fade + slide dipegang oleh ANAK LANGSUNG, bukan wrapper .sr: elemen dengan
+   opacity < 1 menjadi backdrop root, sehingga backdrop-filter kartu glass di
+   dalamnya berhenti membaca latar halaman selama animasi lalu menyala mendadak
+   saat opacity mencapai 1 — warnanya melompat. Kalau opacity dipegang kartu
+   glass-nya sendiri, backdrop-filter membaca latar yang sama dari frame pertama
+   sampai selesai. Slide memakai `translate` agar tidak menimpa transform hover. */
+.sr > * { opacity: 0; }
+.sr.in > * { animation: sr-reveal .7s var(--ease-decelerate) both; }
+.sr.d1.in > * { animation-delay: .08s; }
+.sr.d2.in > * { animation-delay: .16s; }
+.sr.d3.in > * { animation-delay: .24s; }
+
+@keyframes sr-reveal {
+  from { opacity: 0; translate: 0 28px; }
+  to { opacity: 1; translate: 0 0; }
+}
 
 .hero-headline { animation: heroReveal 0.8s var(--ease-decelerate) 0.1s both; }
 .hero-subtext { animation: heroReveal 0.8s var(--ease-decelerate) 0.25s both; }
@@ -1544,11 +1555,12 @@ ul { margin: 0; padding: 0; list-style: none; }
 .data-table th { text-align: left; padding: 14px 16px; background: var(--color-primary-light); color: var(--color-primary); font-weight: 700; white-space: nowrap; }
 .data-table td { padding: 13px 16px; border-top: 1px solid var(--color-divider); color: var(--color-text-secondary); }
 .data-table tr:hover td { background: var(--color-bg-main); }
-.pill { 
+/* Tanpa backdrop-filter: badge selalu duduk di atas permukaan glass yang sudah
+   di-blur, jadi blur/saturate di sini nyaris tak terlihat tapi bikin warnanya
+   melompat begitu kartu induknya selesai fade-in (lihat catatan .sr). */
+.pill {
   display: inline-flex; align-items: center; gap: 5px; padding: 3px 10px; border-radius: var(--radius-full); font-size: var(--text-caption); font-weight: 600;
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%);
-  backdrop-filter: blur(12px) saturate(150%);
-  -webkit-backdrop-filter: blur(12px) saturate(150%);
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
@@ -1685,7 +1697,7 @@ ul { margin: 0; padding: 0; list-style: none; }
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
-  .sr { opacity: 1; transform: none; }
+  .sr > *, .sr.in > * { opacity: 1; translate: none; animation: none; }
 }
 
 /* ============================================================
